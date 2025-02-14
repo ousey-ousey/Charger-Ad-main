@@ -6,6 +6,8 @@ import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Dialog, DialogContent, DialogHeader, DialogTrigger } from "@/components/ui/dialog";
+import { DialogTitle } from "@radix-ui/react-dialog";
 
 const carouselItems = [
   { id: 1, src: "/product-1.png", alt: "Item 1" },
@@ -15,7 +17,7 @@ const carouselItems = [
 
 export const ProductSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-
+  
   const settings = {
     dots: true,
     infinite: true,
@@ -24,7 +26,7 @@ export const ProductSection = () => {
     slidesToScroll: 1,
     pauseOnFocus: false,
     pauseOnHover: false,
-    focusOnSelect: true,
+    focusOnSelect: false, // Removed focus on image
     autoplaySpeed: 3000,
     autoplay: true,
     arrows: false,
@@ -48,7 +50,7 @@ export const ProductSection = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           centerMode: false,
         },
       },
@@ -98,25 +100,89 @@ export const ProductSection = () => {
             </motion.p>
 
             <div className="flex items-center gap-5 mt-8">
-              <motion.button
-                className="px-6 py-3 bg-primary text-lg sm:text-xl text-white font-medium rounded-lg shadow-md hover:bg-primary/90 transition-all"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                إشترِ الآن
-              </motion.button>
-              <p className="text-primary text-xl font-semibold">السعر : 200.00 SAR</p>
-            </div>
+            <Dialog>
+              <div className="flex items-center gap-5">
+                <DialogTrigger asChild>
+                  <motion.button
+                    className="mt-8 px-6 py-3 bg-primary text-lg sm:text-xl text-white font-medium rounded-lg shadow-md hover:bg-primary/90 transition-all"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    إشترِ الآن
+                  </motion.button>
+                </DialogTrigger>
+                <p className="text-primary text-xl font-semibold mt-7">السعر : 200.00 SAR</p>
+              </div>
+              <DialogContent className="max-w-sm sm:max-[400px] bg-[#FAF3EA]">
+                <DialogHeader>
+                  <DialogTitle className="text-center text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary">
+                    اعثر على راحتك ووقتك
+                  </DialogTitle>
+                </DialogHeader>
+                <motion.div
+                  className="flex items-center justify-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                >
+                  <div className="p-5 rounded-lg w-full max-w-md">
+                    <form className="space-y-3">
+                      <div>
+                        <label className="block text-sm font-medium text-primary">
+                          الإسم بالكامل
+                        </label>
+                        <input
+                          type="text"
+                          className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-[#FEE3BB] placeholder:text-white rounded-sm shadow-sm focus:outline-none"
+                          placeholder="الإسم بالكامل"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-primary">
+                          رقم الهاتف
+                        </label>
+                        <input
+                          type="text"
+                          className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-[#FEE3BB] placeholder:text-white rounded-sm shadow-sm focus:outline-none"
+                          placeholder="رقم الهاتف"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-primary">
+                          العنوان
+                        </label>
+                        <input
+                          type="text"
+                          className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-[#FEE3BB] placeholder:text-white rounded-sm shadow-sm focus:outline-none"
+                          placeholder="العنوان"
+                        />
+                      </div>
+                      <div>
+                        <button
+                          type="submit"
+                          className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-[#F57C00] to-[#8F4800] hover:from-[#F57C00] hover:to-[#8F4800] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        >
+                          اشترى الآن
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </motion.div>
+              </DialogContent>
+            </Dialog></div>
           </div>
 
           <div className="relative">
             <Slider {...settings} className="focus:border-none">
               {carouselItems.map((item) => (
-                <div key={item.id} className="rounded focus:border-none shadow h-[31.25rem] flex items-center justify-center">
+                <div
+                  key={item.id}
+                  className="rounded focus:border-none shadow h-[31.25rem] flex items-center justify-center"
+                >
                   <img
                     src={item.src}
                     alt={item.alt}
-                    className="w-full focus:border-none h-full object-contain"
+                    className="w-full h-full object-contain pointer-events-none"
                   />
                 </div>
               ))}

@@ -60,15 +60,21 @@ export const Hero = () => {
   }, [currentSlide]);
 
   return (
-    <div className="relative bg-[#FAEEDF] overflow-hidden min-h-screen flex flex-col md:flex-row items-center justify-center px-6">
+    <div className="relative bg-[#FAEEDF] overflow-hidden min-h-screen flex flex-col md:flex-row mb-32 items-center justify-center px-6">
       {/* White Corner Box */}
-      <div className="absolute bg-white w-[35%] h-[15%] top-0 right-0 rounded-bl-[2rem] z-40"></div>
+      <div
+  className="absolute bg-white w-[35%] h-[15%] top-0 right-0 rounded-bl-[2rem] z-40"
+>
+  <p className="text-4xl font-semibold text-center mt-8 text-[#FFA726]">
+    حامل شحن لاسلكي دوار 3 في 1
+  </p>
+</div>
+
 
       {/* Decorative Images */}
       <img src="/sliderdeco.png" alt="deco" className="absolute top-0 left-0" />
       <img src="/sliderdeco2.png" alt="deco" className="absolute bottom-0 left-[-2rem]" />
       <img src="/sliderdeco3.png" alt="deco" className="absolute bottom-0 right-0" />
-      <img src="/sliderdeco4.png" alt="deco" className="absolute bottom-[20] right-[20rem]" />
 
       {/* Main Slider Content */}
       <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl gap-5">
@@ -80,21 +86,23 @@ export const Hero = () => {
           >
             {/* Text Section */}
             <motion.p
-              className="w-full md:w-1/2 text-center md:text-right leading-5 text-3xl md:text-5xl font-semibold text-[#333]"
-              variants={textVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              {slides[currentSlide].text}
-            </motion.p>
+  className="w-full md:w-1/2 text-center text-3xl md:text-5xl font-semibold text-[#3E2723]"
+  style={{ lineHeight: "5rem" }}
+  variants={textVariants}
+  initial="hidden"
+  animate="visible"
+  exit="exit"
+>
+  {slides[currentSlide].text}
+</motion.p>
+
 
             {/* Image Section */}
-            <div className="flex justify-center items-center">
+            <div className="flex justify-between items-center">
             <motion.img
   src={slides[currentSlide].image}
   alt={`Slide ${currentSlide + 1}`}
-  className="max-w-[50rem] w-full h-auto z-50 mr-8 self-center object-contain"
+  className="max-w-[50rem] w-full relative left-[-10rem] h-auto z-50 mr-8 self-center object-contain"
   variants={imageVariants}
   initial="hidden"
   animate="visible"
