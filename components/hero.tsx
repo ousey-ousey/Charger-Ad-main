@@ -18,9 +18,8 @@ const slides = [
   },
 ];
 
-// Image Animation
 const imageVariants = {
-  hidden: { x: 100, opacity: 0 }, 
+  hidden: { x: 100, opacity: 0 },
   visible: {
     x: 0,
     opacity: 1,
@@ -33,7 +32,6 @@ const imageVariants = {
   },
 };
 
-// Text Animation
 const textVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -55,62 +53,68 @@ export const Hero = () => {
     const timer = setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 3000);
-
     return () => clearTimeout(timer);
   }, [currentSlide]);
 
   return (
-    <div className="relative bg-[#FAEEDF] overflow-hidden min-h-screen flex flex-col md:flex-row mb-32 items-center justify-center px-6">
-      {/* White Corner Box */}
-      <div
-  className="absolute bg-white w-[35%] h-[15%] top-0 right-0 rounded-bl-[2rem] z-40"
->
-  <p className="text-4xl font-semibold text-center mt-8 text-[#FFA726]">
-    حامل شحن لاسلكي دوار 3 في 1
-  </p>
-</div>
+    <div className="relative bg-[#FAEEDF] overflow-hidden min-h-screen flex flex-col md:flex-row mb-32 items-center w-full justify-center px-6">
+      {/* White Header Box */}
+      <div className="absolute bg-white w-[35%] h-[15%] top-0 right-0 flex justify-center items-center rounded-bl-[2rem] z-40">
+        <p className="text-[2.5rem] font-semibold text-center text-[#FFA726]">
+          حامل شحن لاسلكي دوار 3 في 1
+        </p>
+      </div>
 
-
-      {/* Decorative Images */}
+      {/* Decorative Elements */}
       <img src="/sliderdeco.png" alt="deco" className="absolute top-0 left-0" />
       <img src="/sliderdeco2.png" alt="deco" className="absolute bottom-0 left-[-2rem]" />
       <img src="/sliderdeco3.png" alt="deco" className="absolute bottom-0 right-0" />
 
-      {/* Main Slider Content */}
+      {/* Slider Content */}
       <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl gap-5">
         <AnimatePresence mode="wait">
-          {/* Slide Content */}
           <motion.div
             key={currentSlide}
             className="flex flex-col md:flex-row items-center justify-center w-full gap-5"
           >
-            {/* Text Section */}
+            {/* Text Container */}
             <motion.p
-  className="w-full md:w-1/2 text-center text-3xl md:text-5xl font-semibold text-[#3E2723]"
-  style={{ lineHeight: "5rem" }}
-  variants={textVariants}
-  initial="hidden"
-  animate="visible"
-  exit="exit"
->
-  {slides[currentSlide].text}
-</motion.p>
+              className="w-full md:w-[50%] text-right text-6xl min-w-[31.25rem] 
+                        flex justify-start flex-wrap font-bold text-[#3E2723]"
+              style={{ lineHeight: "5rem" }}
+              variants={textVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              {currentSlide === 1 ? (
+               <div>
+               <p className="text-6xl font-bold text-right max-w-[31.25rem] leading-tight whitespace-nowrap">
+                 شحن لاسلكي مغناطيسي
+               </p>
+               <p className="text-6xl font-bold text-right max-w-[31.25rem] leading-tight whitespace-nowrap">
+                 شاحن سريع سطح المكتب
+               </p>
+             </div>
+               
+              ) : (
+                slides[currentSlide].text
+              )}
+            </motion.p>
 
-
-            {/* Image Section */}
+            {/* Image Container */}
             <div className="flex justify-between items-center">
-            <motion.img
-  src={slides[currentSlide].image}
-  alt={`Slide ${currentSlide + 1}`}
-  className="max-w-[50rem] w-full relative left-[-10rem] h-auto z-50 mr-8 self-center object-contain"
-  variants={imageVariants}
-  initial="hidden"
-  animate="visible"
-  exit="exit"
-  style={{ maxHeight: "100vh" }} 
-/>
+              <motion.img
+                src={slides[currentSlide].image}
+                alt={`Slide ${currentSlide + 1}`}
+                className="max-w-[50rem] w-full relative left-[-10rem] h-auto z-50 mr-8 self-center object-contain"
+                variants={imageVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                style={{ maxHeight: "100vh" }}
+              />
             </div>
-           
           </motion.div>
         </AnimatePresence>
       </div>

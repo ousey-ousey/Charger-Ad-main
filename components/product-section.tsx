@@ -67,7 +67,7 @@ export const ProductSection = () => {
     >
       <div className="mx-5 sm:mx-10">
         <motion.h2
-          className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary leading-snug"
+          className="text-xl sm:text-xl lg:text-3xl xl:text-3xl font-bold text-primary leading-snug"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -76,23 +76,29 @@ export const ProductSection = () => {
           حامل شحن لاسلكي دوار 3 في 1
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-8 items-center mt-10">
+        <div className="grid md:grid-cols-2 gap-8 items-center  mt-10">
           <div className="text-right">
             <motion.p
               className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-primary"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              style={{
+                lineHeight: "5rem"
+              }}
               transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
             >
               حامل شحن لاسلكي دوار 3 في 1 من Levelo TERRA مع بنك طاقة
             </motion.p>
 
             <motion.p
-              className="mt-10 text-[#616161] text-base sm:text-lg md:text-xl font-bold"
+              className="mt-10 text-[#616161] text-base sm:text-lg leading-[5rem] md:text-xl font-bold"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              style={{
+                lineHeight: "3rem"
+              }}
               transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
             >
               قابل للفصل بقوة 5000 مللي أمبير في الساعة، ونظام تبديد الحرارة،
