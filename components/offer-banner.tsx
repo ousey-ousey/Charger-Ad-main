@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { PercentCircle } from "lucide-react";
@@ -65,77 +64,77 @@ export const OfferBanner = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="mx-5 sm:mx-10 mb-20 bg-gradient-to-r from-[#996417] to-[#FFA726] p-5 rounded-lg flex flex-col md:flex-row justify-between items-center text-white"
+      className="mx-5 sm:mx-10 mb-20 bg-gradient-to-r from-[#996417] to-[#FFA726] p-4 sm:p-5 rounded-lg flex flex-col md:flex-row justify-between items-center text-white"
     >
-      {/* Countdown Label with icon */}
+      {/* Countdown Label with Icon */}
       <motion.span
         variants={itemVariants}
         whileHover={{ scale: 1.05, rotate: 5 }}
-        className="flex items-center gap-3 text-lg md:text-xl font-semibold text-[#FEE3BB] mb-4 md:mb-0"
+        className="flex items-center gap-2 sm:gap-3 text-base sm:text-lg md:text-xl font-semibold text-[#FEE3BB] mb-4 md:mb-0"
       >
-        <PercentCircle />
+        <PercentCircle className="w-5 h-5 sm:w-6 sm:h-6" />
         هذه العروض ستنتهي بعد:
       </motion.span>
 
       {/* Countdown Timer */}
       <motion.div
         variants={itemVariants}
-        className="grid grid-cols-2 sm:grid-cols-4 gap-4"
+        className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4"
       >
         {/* Days */}
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className="flex flex-col items-center gap-2"
+          className="flex flex-col items-center gap-1 sm:gap-2"
         >
           <motion.span
             layout
-            className="text-[#D9D9D9] text-2xl md:text-3xl px-3 py-1 rounded-md font-mono"
+            className="text-[#D9D9D9] text-xl sm:text-2xl md:text-3xl px-2 sm:px-3 py-1 rounded-md font-mono"
           >
             {String(timeLeft.days).padStart(2, "0")}
           </motion.span>
-          <span className="text-lg md:text-xl">أيام</span>
+          <span className="text-sm sm:text-base md:text-lg">أيام</span>
         </motion.div>
 
         {/* Hours */}
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className="flex flex-col items-center gap-2"
+          className="flex flex-col items-center gap-1 sm:gap-2"
         >
           <motion.span
             layout
-            className="text-[#D9D9D9] text-2xl md:text-3xl px-3 py-1 rounded-md font-mono"
+            className="text-[#D9D9D9] text-xl sm:text-2xl md:text-3xl px-2 sm:px-3 py-1 rounded-md font-mono"
           >
             {String(timeLeft.hours).padStart(2, "0")}
           </motion.span>
-          <span className="text-lg md:text-xl">ساعات</span>
+          <span className="text-sm sm:text-base md:text-lg">ساعات</span>
         </motion.div>
 
         {/* Minutes */}
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className="flex flex-col items-center gap-2"
+          className="flex flex-col items-center gap-1 sm:gap-2"
         >
           <motion.span
             layout
-            className="text-[#D9D9D9] text-2xl md:text-3xl px-3 py-1 rounded-md font-mono"
+            className="text-[#D9D9D9] text-xl sm:text-2xl md:text-3xl px-2 sm:px-3 py-1 rounded-md font-mono"
           >
             {String(timeLeft.minutes).padStart(2, "0")}
           </motion.span>
-          <span className="text-lg md:text-xl">دقائق</span>
+          <span className="text-sm sm:text-base md:text-lg">دقائق</span>
         </motion.div>
 
         {/* Seconds */}
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className="flex flex-col items-center gap-2"
+          className="flex flex-col items-center gap-1 sm:gap-2"
         >
           <motion.span
             layout
-            className="text-[#D9D9D9] text-2xl md:text-3xl px-3 py-1 rounded-md font-mono"
+            className="text-[#D9D9D9] text-xl sm:text-2xl md:text-3xl px-2 sm:px-3 py-1 rounded-md font-mono"
           >
             {String(timeLeft.seconds).padStart(2, "0")}
           </motion.span>
-          <span className="text-lg md:text-xl">ثواني</span>
+          <span className="text-sm sm:text-base md:text-lg">ثواني</span>
         </motion.div>
       </motion.div>
     </motion.section>

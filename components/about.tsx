@@ -83,8 +83,8 @@ export const About = () => {
                 className="flex flex-col items-start gap-3 relative"
                 variants={itemVariants}
               >
-                <div className="bg-[#35736E33] size-10 rounded-full absolute right-5 top-1" />
-                <ShoppingBag className="size-10" />
+                <div className="bg-[#35736E33] w-10 h-10 rounded-full absolute right-5 top-1" />
+                <ShoppingBag className="w-10 h-10" />
                 <h2 className="text-lg font-semibold text-primary">
                   سهولة التصفح
                 </h2>
@@ -97,8 +97,8 @@ export const About = () => {
                 className="flex flex-col items-start gap-3 relative"
                 variants={itemVariants}
               >
-                <div className="bg-[#35736E33] size-10 rounded-full absolute right-5 top-1" />
-                <Truck className="size-10 transform scale-x-[-1]" />
+                <div className="bg-[#35736E33] w-10 h-10 rounded-full absolute right-5 top-1" />
+                <Truck className="w-10 h-10 transform -scale-x-100" />
                 <h2 className="text-lg font-semibold text-primary">
                   سرعة التوصيل
                 </h2>
@@ -111,8 +111,8 @@ export const About = () => {
                 className="flex flex-col items-start gap-3 relative"
                 variants={itemVariants}
               >
-                <div className="bg-[#35736E33] size-10 rounded-full absolute right-5 top-1" />
-                <RefreshCcw className="size-10" />
+                <div className="bg-[#35736E33] w-10 h-10 rounded-full absolute right-5 top-1" />
+                <RefreshCcw className="w-10 h-10" />
                 <h2 className="text-lg font-semibold text-primary">
                   استرجاع التلف
                 </h2>
@@ -125,8 +125,8 @@ export const About = () => {
                 className="flex flex-col items-start gap-3 relative"
                 variants={itemVariants}
               >
-                <div className="bg-[#35736E33] size-10 rounded-full absolute right-5 top-1" />
-                <UserRoundCheck className="size-10" />
+                <div className="bg-[#35736E33] w-10 h-10 rounded-full absolute right-5 top-1" />
+                <UserRoundCheck className="w-10 h-10" />
                 <h2 className="text-lg font-semibold text-primary">
                   آراء العملاء
                 </h2>

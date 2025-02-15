@@ -63,7 +63,7 @@ export const ServicesSection = () => {
             <DropdownMenuTrigger asChild>
               <Button
                 variant="outline"
-                className="absolute left-[45%] -bottom-4 shadow-lg text-center bg-primary hover:bg-primary/90"
+                className="absolute left-1/2 transform -translate-x-1/2 -bottom-4 shadow-lg text-center bg-primary hover:bg-primary/90"
               >
                 <ChevronDown
                   className={`transition-transform duration-300 text-white ${
@@ -107,7 +107,7 @@ export const ServicesSection = () => {
             <DropdownMenuTrigger asChild>
               <Button
                 variant="outline"
-                className="absolute border-none shadow-lg left-[45%] -bottom-4 text-center bg-[#FAF3EA] hover:bg-[#FAF3EA]/90"
+                className="absolute left-1/2 transform -translate-x-1/2 -bottom-4 border-none shadow-lg text-center bg-[#FAF3EA] hover:bg-[#FAF3EA]/90"
               >
                 <ChevronDown
                   className={`transition-transform duration-300 text-primary ${
@@ -128,7 +128,7 @@ export const ServicesSection = () => {
                     className="w-60 p-5 bg-primary border border-[#FAF3EA]"
                   >
                     <p className="text-[#FAF3EA] text-justify">
-                    عند استلام المنتج ، يمكنك إعادته خلال 30 يوم إذا كانت لديك
+                      عند استلام المنتج ، يمكنك إعادته خلال 30 يوم إذا كانت لديك
                       أي أسئلة بعد استلام المنتج ، فيرجى الاتصال بالدردشة
                       المباشرة أو البريد الإلكترونى support@yourstore.com
                     </p>
@@ -150,7 +150,7 @@ export const ServicesSection = () => {
             <DropdownMenuTrigger asChild>
               <Button
                 variant="outline"
-                className="absolute left-[45%] -bottom-4 shadow-lg text-center bg-primary hover:bg-primary/90"
+                className="absolute left-1/2 transform -translate-x-1/2 -bottom-4 shadow-lg text-center bg-primary hover:bg-primary/90"
               >
                 <ChevronDown
                   className={`transition-transform duration-300 text-white ${

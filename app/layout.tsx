@@ -12,6 +12,7 @@ const almarai = Almarai({
 export const metadata: Metadata = {
   title: "كل ما يخص الشواحن",
   description: "كل ما يخص الشواحن",
+  viewport: "width=device-width, initial-scale=1", // Added viewport meta tag
 };
 
 export default function RootLayout({

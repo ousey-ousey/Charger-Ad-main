@@ -28,9 +28,9 @@ export const DetailsSection = () => {
             <Image
               src="/detail-1.png"
               alt="detail"
-              className="object-cover"
               width={800}
               height={500}
+              className="w-full h-auto object-cover"
             />
             <h2 className="text-2xl lg:text-3xl font-bold text-primary">
               تواجة مشاكل بالشحن وعدم توفر الوقت للشحن
@@ -51,7 +51,7 @@ export const DetailsSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}
-        className="relative flex flex-row-reverse py-10 sm:py-20 "
+        className="relative flex flex-col-reverse sm:flex-row-reverse py-10 sm:py-20"
       >
         <div className="absolute top-10 -right-6 opacity-50 sm:opacity-100">
           <Image
@@ -67,9 +67,9 @@ export const DetailsSection = () => {
             <Image
               src="/detail-2.png"
               alt="detail"
-              className="object-cover"
               width={800}
               height={500}
+              className="w-full h-auto object-cover"
             />
             <h2 className="text-2xl lg:text-3xl font-bold text-primary">
               تواجة مشاكل تشابك الأسلاك والفوضى؟
@@ -106,9 +106,9 @@ export const DetailsSection = () => {
             <Image
               src="/detail-3.png"
               alt="detail"
-              className="object-cover"
               width={700}
               height={500}
+              className="w-full h-auto object-cover"
             />
             <h2 className="text-2xl lg:text-3xl font-bold text-primary">
               جهازك ترتفع حرارته أثناء الشحن؟

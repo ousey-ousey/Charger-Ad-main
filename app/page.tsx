@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
 import { Banner } from "@/components/banner";
@@ -7,7 +8,6 @@ import { RadioGroups } from "@/components/radio-groups";
 import { ProductSection } from "@/components/product-section";
 import { DetailsSection } from "@/components/details-section";
 import { ServicesSection } from "@/components/services-section";
-import Footer from "@/components/Footer";
 
 export default function LandingPage() {
   return (
