@@ -104,56 +104,47 @@ export const Hero = () => {
             >
               {currentSlide === 1 ? (
                 <div>
-                  <p className="text-2xl sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
+                  <p className="text-2xl text-center md:text-right sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
                     شحن لاسلكي مغناطيسي
                   </p>
-                  <p className="text-2xl mt-3 sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
+                  <p className="text-2xl mt-3 md:text-right sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
                     شاحن سريع سطح المكتب
                   </p>
                 </div>
               ) : currentSlide === 0 ? (
                 <div>
-                  <p className="text-2xl sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
+                  <p className="text-2xl text-center md:text-right sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
                  وفر وقتك ولا تضيع 
                   </p>
-                 <p className="text-2xl mt-3 sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
+                 <p className="text-2xl text-center md:text-right mt-3 sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
                  فرص مع الشاحن
                   </p>
                   
                 </div>
               ):currentSlide === 2 ? (
                 <div>
-                  <p className="text-2xl sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
+                  <p className="text-2xl text-center md:text-right sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
           يعمل لجميع الأجهزة،                </p>
-                <p className="text-2xl mt-3 sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
+                <p className="text-2xl text-center md:text-right mt-3 sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
                 حامل + شاحن                  </p>
                 </div>
               ):""}
             </motion.div>
 
             {/* Image Container */}
-                   <div className="flex justify-center items-center">
-            <motion.img
-  src={slides[currentSlide].image}
-  alt={`Slide ${currentSlide + 1}`}
-  className="max-w-[50rem] w-full relative left-[-10rem] h-auto z-50 mr-8 self-center object-contain"
-  variants={imageVariants}
-  initial="hidden"
-  animate="visible"
-  exit="exit"
-  style={{ maxHeight: "100vh" }} 
-/>
-              <motion.img
-                src={slides[currentSlide].image}
-                alt={`Slide ${currentSlide + 1}`}
-                className="max-w-[50rem] w-full relative left-[-10rem] h-auto z-50 mr-8 self-center object-contain"
-                variants={imageVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                style={{ maxHeight: "100vh" }}
-              />
-            </div>
+                  {/* Image Container */}
+<div className="flex justify-center md:justify-start items-center">
+  <motion.img
+    src={slides[currentSlide].image}
+    alt={`Slide ${currentSlide + 1}`}
+    className="max-w-[50rem] w-full md:left-[-10rem] left-0 h-auto z-50 md:mr-8 mr-0 self-center object-contain"
+    variants={imageVariants}
+    initial="hidden"
+    animate="visible"
+    exit="exit"
+    style={{ maxHeight: "100vh" }}
+  />
+</div>
           </motion.div>
         </AnimatePresence>
       </div>
