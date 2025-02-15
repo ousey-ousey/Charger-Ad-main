@@ -36,7 +36,7 @@ export const Features = () => {
         <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
-          className="flex items-center justify-around md:justify-normal sm:gap-4"
+          className="flex items-center justify-between md:justify-normal sm:gap-4"
         >
           <div>
             <h2 className="text-base sm:text-lg md:text-xl font-bold text-primary">
