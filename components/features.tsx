@@ -25,7 +25,7 @@ export const Features = () => {
 
   return (
     <motion.section
-      className="bg-[#FAF3EA] p-4 sm:p-8 flex justify-center md:p-16 mb-10 sm:mb-20"
+      className="bg-[#FAF3EA] p-4 sm:p-8 flex justify-center md:block  md:p-16 mb-10 sm:mb-20"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -36,7 +36,7 @@ export const Features = () => {
         <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
-          className="flex items-center justify-between sm:gap-4"
+          className="flex items-center justify-around md:justify-normal sm:gap-4"
         >
           <div>
             <h2 className="text-base sm:text-lg md:text-xl font-bold text-primary">
@@ -61,7 +61,7 @@ export const Features = () => {
         <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
-          className="flex items-center justify-between gap-3 sm:gap-4"
+          className="flex items-center justify-between md:justify-normal gap-3 sm:gap-4"
         >
           <div>
             <h2 className="text-base sm:text-lg md:text-xl font-bold text-primary">
@@ -86,7 +86,7 @@ export const Features = () => {
         <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
-          className="flex items-center justify-between  gap-3 sm:gap-4"
+          className="flex items-center justify-between md:justify-normal  gap-3 sm:gap-4"
         >
           <div>
             <h2 className="text-base sm:text-lg md:text-xl font-bold text-primary">
@@ -111,7 +111,7 @@ export const Features = () => {
         <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
-          className="flex items-center justify-between  gap-3 sm:gap-4"
+          className="flex items-center justify-between md:justify-normal  gap-3 sm:gap-4"
         >
           <div>
             <h2 className="text-base sm:text-lg md:text-xl font-bold text-primary">
