@@ -26,7 +26,7 @@ export const ProductSection = () => {
     slidesToScroll: 1,
     pauseOnFocus: false,
     pauseOnHover: false,
-    focusOnSelect: false, // Removed focus on image
+    focusOnSelect: false, 
     autoplaySpeed: 3000,
     autoplay: true,
     arrows: false,
