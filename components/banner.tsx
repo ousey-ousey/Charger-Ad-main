@@ -15,7 +15,7 @@ export const Banner = () => {
       className={`relative flex justify-center items-center text-center h-16 sm:h-20 p-4 md:p-8 lg:p-12 ${cairo.className}`}
       style={{
         backgroundImage:
-          "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/image-1.png')",
+          "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('/image-1.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -28,14 +28,14 @@ export const Banner = () => {
       <img
         src="/Vector-banner.png"
         alt="draw"
-        className="absolute bottom-4 left-[48%] transform -translate-x-1/2 w-3/4 h-10 z-0 opacity-80"
+        className="absolute bottom-4 left-[48%] transform -translate-x-1/2 w-3/4 h-10 z-0 opacity-60 m:opacity-80"
       />
 
       {/* Delivery Icon positioned at the end of the vector */}
       <img
         src="/mdi_delivery-dining-electric.png"
         alt="delivery"
-        className="absolute bottom-4 right-[13%] z-0 w-12 h-12"
+        className="absolute bottom-4 right-[13%] opacity-60 m:opacity-80 z-0 w-12 h-12"
       />
 
       {/* Text Content */}

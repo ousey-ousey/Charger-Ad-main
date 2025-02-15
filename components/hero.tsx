@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   {
-    text: "وفر وقتك ولا تضيع فرص مع الشاحن",
+    text: "وفر وقتك لا تضيع فرص مع الشاحن",
     image: "/slideimage1.png",
   },
   {
@@ -57,10 +57,13 @@ export const Hero = () => {
   }, [currentSlide]);
 
   return (
-    <div className="relative bg-[#FAEEDF] overflow-hidden min-h-screen flex flex-col md:flex-row mb-32 items-center w-full justify-center px-4 sm:px-6">
+    <div className="relative bg-[#FAEEDF] overflow-hidden min-h-screen flex flex-col md:flex-row mb-20 md:mb-28 items-center w-full justify-center px-4 sm:px-6">
       {/* White Header Box */}
       <div className="absolute bg-white md:w-[35%] md:h-[15%] w-11/12 h-auto top-0 right-0 flex justify-center items-center rounded-bl-[2rem] z-40 p-2">
-        <p className="text-center text-xl sm:text-2xl md:text-[2.5rem] font-semibold text-[#FFA726]">
+        <p 
+          style={{ lineHeight: "2rem" }}
+          className="text-center text-xl sm:text-2xl md:text-[2.3rem] font-semibold text-[#FFA726]"
+        >
           حامل شحن لاسلكي دوار 3 في 1
         </p>
       </div>
@@ -74,7 +77,7 @@ export const Hero = () => {
       <img
         src="/sliderdeco2.png"
         alt="deco"
-        className="absolute bottom-0 left-[-2rem] w-10 sm:w-12 md:w-auto"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       />
       <img
         src="/sliderdeco3.png"
@@ -83,7 +86,7 @@ export const Hero = () => {
       />
 
       {/* Slider Content */}
-      <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl gap-5 mt-20 md:mt-0">
+      <div className="relative flex flex-col md:flex-row items-center justify-around w-full max-w-6xl gap-40 mt-20 md:mt-0 z-10">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
@@ -91,39 +94,64 @@ export const Hero = () => {
           >
             {/* Text Container */}
             <motion.div
-              className="w-full md:w-3/4 text-center md:text-right flex flex-col justify-start items-center md:items-start"
-              variants={textVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
+               className="w-full md:w-[50%] text-right text-6xl min-w-[31.25rem] 
+               flex justify-center md:justify-start flex-wrap font-bold text-[#3E2723]"
+     style={{ lineHeight: "5rem" }}
+     variants={textVariants}
+     initial="hidden"
+     animate="visible"
+     exit="exit"
             >
               {currentSlide === 1 ? (
                 <div>
                   <p className="text-2xl sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
                     شحن لاسلكي مغناطيسي
                   </p>
-                  <p className="text-2xl sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
+                  <p className="text-2xl mt-3 sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
                     شاحن سريع سطح المكتب
                   </p>
                 </div>
-              ) : (
-                <p className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight whitespace-nowrap">
-                  {slides[currentSlide].text}
-                </p>
-              )}
+              ) : currentSlide === 0 ? (
+                <div>
+                  <p className="text-2xl sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
+                 وفر وقتك ولا تضيع 
+                  </p>
+                 <p className="text-2xl mt-3 sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
+                 فرص مع الشاحن
+                  </p>
+                  
+                </div>
+              ):currentSlide === 2 ? (
+                <div>
+                  <p className="text-2xl sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
+          يعمل لجميع الأجهزة،                </p>
+                <p className="text-2xl mt-3 sm:text-3xl md:text-6xl font-bold leading-tight whitespace-nowrap">
+                حامل + شاحن                  </p>
+                </div>
+              ):""}
             </motion.div>
 
             {/* Image Container */}
-            <div className="flex justify-center items-center md:w-1/2">
+                   <div className="flex justify-center items-center">
+            <motion.img
+  src={slides[currentSlide].image}
+  alt={`Slide ${currentSlide + 1}`}
+  className="max-w-[50rem] w-full relative left-[-10rem] h-auto z-50 mr-8 self-center object-contain"
+  variants={imageVariants}
+  initial="hidden"
+  animate="visible"
+  exit="exit"
+  style={{ maxHeight: "100vh" }} 
+/>
               <motion.img
                 src={slides[currentSlide].image}
                 alt={`Slide ${currentSlide + 1}`}
-                className="w-full max-w-md md:max-w-[50rem] h-auto z-50 object-contain"
+                className="max-w-[50rem] w-full relative left-[-10rem] h-auto z-50 mr-8 self-center object-contain"
                 variants={imageVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                style={{ maxHeight: "80vh" }}
+                style={{ maxHeight: "100vh" }}
               />
             </div>
           </motion.div>
