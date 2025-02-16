@@ -4,7 +4,6 @@ import Slider, { Settings } from 'react-slick';
 import Image from 'next/image';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { AiOutlineSmile } from 'react-icons/ai';
 
 interface Testimonial {
   name: string;
@@ -34,10 +33,9 @@ const feedbacks: Testimonial[] = [
   },
 ];
 
-
-
-
 export default function FeedbackSection() {
+  const sliderRef = React.useRef<Slider>(null);
+
   const settings: Settings = {
     dots: true,
     infinite: true,
@@ -51,67 +49,62 @@ export default function FeedbackSection() {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          arrows: false
-        }
-      }
+          arrows: false,
+        },
+      },
     ],
     dotsClass: 'slick-dots custom-dots',
   };
 
   return (
     <section className="w-full py-24 bg-[#FFF7ED] mb-20 md:mb-32 relative">
-       <h2 className="text-center text-4xl font-bold text-brown-800 mb-10">
+      <h2 className="text-center text-4xl text-[#3E2723] font-bold text-brown-800 mb-10">
         آراء عملائنا
       </h2>
       <div className="max-w-6xl mx-auto px-4 relative">
-        <Slider {...settings}>
+        <Slider ref={sliderRef} {...settings}>
           {feedbacks.map((item, index) => (
             <div key={index} className="px-4 focus:outline-none">
-              <div 
-                className="relative bg-white border-2 border-[#FEC89A] rounded-xl shadow-lg 
+              <div
+                className="relative bg-white border-2 border-[#FEC89A] rounded-2xl shadow-lg 
                          px-6 pt-16 pb-10 flex flex-col items-center hover:shadow-xl transition-shadow"
                 style={{ minHeight: '30.25rem' }}
               >
-                <div className="">
-                  <div className="relative w-28 h-28 rounded-full overflow-hidden border-3 border-white shadow-lg">
+                <div className=" relative">
+                  <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-[#3E2723] shadow-lg">
                     <Image
                       src={item.image}
                       alt={item.name}
                       fill
-                      className="object-center object-contain"
+                      className="object-cover object-top"
                       sizes="(max-width: 48rem) 100vw, 24rem"
                     />
                   </div>
+                  <img src="/yellowcircle.png" alt="circle" className=" absolute top-[-3.6625rem] right-[-6.25rem] " />
                 </div>
                 <h3 className="mt-4 text-lg font-semibold mb-3 text-brown-900">{item.name}</h3>
                 <p className="text-center text-gray-700 mb-4 leading-relaxed">{item.feedback}</p>
-                <div className="flex items-center gap-2 mt-auto">
-                  {Array.from({ length: 5 }).map((_, starIdx) => (
-                    <span 
-                      key={starIdx}
-                      className={`text-xl ${starIdx < item.rating ? 'text-yellow-500' : 'text-gray-300'}`}
-                    >
-                      ⭐
-                    </span>
-                  ))}
-                  <AiOutlineSmile className="text-green-600 text-2xl ml-2" />
+                <div className="flex flex-row justify-between items-center gap-20 mt-auto">
+                  <img src="/stars.png" alt="star" />
+                  <img src="/face.png" alt="face" />
                 </div>
               </div>
             </div>
           ))}
         </Slider>
+        <img src="/arrow1.png" alt="left arrow" className='absolute left-0 cursor-pointer' onClick={() => sliderRef.current?.slickPrev()} />
+        <img src="/arrow2.png" alt="right arrow" className='absolute right-0 cursor-pointer' onClick={() => sliderRef.current?.slickNext()} />
       </div>
       <style jsx>{`
         .custom-dots {
           bottom: -50px;
-           color: #FB923C;
         }
         .custom-dots li button:before {
           font-size: 14px;
-          color: #FEC89A;
+          color: #FEE3BB !important;
         }
         .custom-dots li.slick-active button:before {
-          color: #FB923C;
+          color: #FFA726 !important;
         }
       `}</style>
     </section>
