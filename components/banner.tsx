@@ -11,7 +11,8 @@ const cairo = Cairo({
 
 export const Banner = () => {
   return (
-    <motion.section
+    <div>
+        <motion.section
       className={`relative flex justify-center items-center text-center h-16 sm:h-20 p-4 md:p-8 lg:p-12 ${cairo.className}`}
       style={{
         backgroundImage:
@@ -40,7 +41,7 @@ export const Banner = () => {
 
       {/* Text Content */}
       <motion.p
-        className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold px-4 py-3 rounded-lg text-[#FFA726] relative z-10"
+        className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold px-4 py-3 rounded-lg text-[#2EC5A7] relative z-10"
         style={{ lineHeight: 1.75 }}
         initial={{ scale: 0.9, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -51,5 +52,9 @@ export const Banner = () => {
         <span className="text-[#FEE3BB]"> %50 </span>+ هدية بعد الطلب
       </motion.p>
     </motion.section>
-  );
+      <img src="greenline.png" alt="greeny" 
+        className="w-full h-auto object-cover mb-8"
+      />
+    </div>
+    );
 };

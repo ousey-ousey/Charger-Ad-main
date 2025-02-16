@@ -64,7 +64,7 @@ export const OfferBanner = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="mx-5 sm:mx-10 mb-20 bg-gradient-to-r from-[#996417] to-[#FFA726] p-4 sm:p-5 rounded-lg flex flex-col md:flex-row justify-between items-center text-white"
+      className="mx-5 sm:mx-10 mb-20 bg-gradient-to-r from-[#1b6f5f] to-[#2EC5A7] p-4 sm:p-5 rounded-lg flex flex-col md:flex-row justify-between items-center text-white"
     >
       {/* Countdown Label with Icon */}
       <motion.span

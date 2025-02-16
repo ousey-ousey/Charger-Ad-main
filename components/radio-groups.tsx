@@ -40,7 +40,7 @@ export function RadioGroups() {
           animate="animate"
           className={`flex items-center justify-between w-full relative border-2 rounded px-4 py-3 sm:px-9 sm:py-7 cursor-pointer ${
             selectedOption === "option1"
-              ? "border-[#FFA726]"
+              ? "border-[#2EC5A7]"
               : "border-[#B8B0A5]"
           }`}
         >
@@ -70,7 +70,7 @@ export function RadioGroups() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="absolute -top-3 sm:-top-4"
           >
-            <Badge className="bg-[#FFA726] hover:bg-[#e79c2d]">
+            <Badge className="bg-[#2EC5A7] hover:bg-[#2EC5A7]">
               +بطارية 500 أمبير
             </Badge>
           </motion.div>
@@ -85,7 +85,7 @@ export function RadioGroups() {
           animate="animate"
           className={`flex items-center justify-between w-full relative border-2 rounded px-4 py-3 sm:px-9 sm:py-7 cursor-pointer ${
             selectedOption === "option2"
-              ? "border-[#FFA726]"
+              ? "border-[#2EC5A7]"
               : "border-[#B8B0A5]"
           }`}
         >
@@ -115,7 +115,7 @@ export function RadioGroups() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="absolute -top-3 sm:-top-4"
           >
-            <Badge className="bg-[#FFA726] hover:bg-[#e79c2d]">
+            <Badge className="bg-[#2EC5A7] hover:bg-[#2EC5A7]">
               +بطارية 500 أمبير
             </Badge>
           </motion.div>
@@ -125,7 +125,7 @@ export function RadioGroups() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="absolute top-2.5 -left-4 sm:-left-6"
           >
-            <Badge className="bg-[#FFA726] hover:bg-[#e79c2d] rounded-full text-[10px] sm:text-[12px]">
+            <Badge className="bg-[#2EC5A7] hover:bg-[#2EC5A7] rounded-full text-[10px] sm:text-[12px]">
               خصم 100 ريال
             </Badge>
           </motion.div>
@@ -140,7 +140,7 @@ export function RadioGroups() {
           animate="animate"
           className={`flex items-center justify-between w-full relative border-2 rounded px-4 py-3 sm:px-9 sm:py-7 cursor-pointer ${
             selectedOption === "option3"
-              ? "border-[#FFA726]"
+              ? "border-[#2EC5A7]"
               : "border-[#B8B0A5]"
           }`}
         >
@@ -170,7 +170,7 @@ export function RadioGroups() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="absolute -top-3 sm:-top-4"
           >
-            <Badge className="bg-[#FFA726] hover:bg-[#e79c2d]">
+            <Badge className="bg-[#167a66] hover:bg-[#2EC5A7]">
               +بطارية 500 أمبير
             </Badge>
           </motion.div>
@@ -180,7 +180,7 @@ export function RadioGroups() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="absolute top-2.5 -left-4 sm:-left-6"
           >
-            <Badge className="bg-[#FFA726] hover:bg-[#e79c2d] rounded-full text-[10px] sm:text-[12px]">
+            <Badge className="bg-[#167a66] hover:bg-[#2EC5A7] rounded-full text-[10px] sm:text-[12px]">
               خصم 100 ريال
             </Badge>
           </motion.div>
@@ -195,16 +195,22 @@ export function RadioGroups() {
           animate="animate"
           className={`flex items-center justify-between w-full relative border-2 rounded px-4 py-3 sm:px-9 sm:py-7 cursor-pointer ${
             selectedOption === "option4"
-              ? "border-[#FFA726]"
+              ? "border-[##2EC5A7]"
               : "border-[#B8B0A5]"
           }`}
         >
           <div className="flex flex-col sm:items-center sm:flex-row gap-3">
             <RadioGroupItem id="option4" value="option4" className="shrink-0" />
             <h2 className="text-base sm:text-lg font-bold text-primary">
-              كفر مضاد للمياه + خصم 40%
+              كفر مضاد للمياه
+               + 
+               <p className="text-[#FFA726] inline-block">
+               خصم
+            40
+            %
+            </p>
             </h2>
-            <div className="px-3 py-2 sm:px-5 sm:py-3 text-center bg-[#E7E7E7] text-[#F57C00] font-bold text-xs sm:text-sm">
+            <div className="px-3 py-2 sm:px-5 sm:py-3 text-center bg-[#E7E7E7] text-[#FFA726] font-bold text-xs sm:text-sm">
               الأكثر مبيعا
             </div>
           </div>
@@ -228,7 +234,7 @@ export function RadioGroups() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="absolute -top-3 sm:-top-4"
           >
-            <Badge className="bg-[#FFA726] hover:bg-[#e79c2d]">
+            <Badge className="bg-[#167a66] hover:bg-[#2EC5A7]">
               +بطارية 500 أمبير
             </Badge>
           </motion.div>
@@ -238,7 +244,7 @@ export function RadioGroups() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="absolute top-2.5 -left-4 sm:-left-6"
           >
-            <Badge className="bg-[#FFA726] hover:bg-[#e79c2d] rounded-full text-[10px] sm:text-[12px]">
+            <Badge className="bg-[#167a66] hover:bg-[#2EC5A7] rounded-full text-[10px] sm:text-[12px]">
               خصم 100 ريال
             </Badge>
           </motion.div>
@@ -253,16 +259,23 @@ export function RadioGroups() {
           animate="animate"
           className={`flex items-center justify-between w-full relative border-2 rounded px-4 py-3 sm:px-9 sm:py-7 cursor-pointer ${
             selectedOption === "option5"
-              ? "border-[#FFA726]"
+              ? "border-[#2EC5A7]"
               : "border-[#B8B0A5]"
           }`}
         >
           <div className="flex flex-col sm:items-center sm:flex-row gap-3">
             <RadioGroupItem id="option5" value="option5" className="shrink-0" />
             <h2 className="text-base sm:text-lg font-bold text-primary">
-              كفر مضاد للمياه + خصم 40%
+              
+            كفر مضاد للمياه + 
+            <p className="text-[#FFA726] inline-block">
+               خصم
+            40
+            %
+            </p>
+           
             </h2>
-            <div className="px-3 py-2 sm:px-5 sm:py-3 text-center bg-[#E7E7E7] text-[#F57C00] font-bold text-xs sm:text-sm">
+            <div className="px-3 py-2 sm:px-5 sm:py-3 text-center bg-[#E7E7E7] text-[#FFA726] font-bold text-xs sm:text-sm">
               الأكثر مبيعا
             </div>
           </div>
@@ -286,7 +299,7 @@ export function RadioGroups() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="absolute top-2.5 -left-4 sm:-left-6"
           >
-            <Badge className="bg-[#FFA726] hover:bg-[#e79c2d] rounded-full text-[10px] sm:text-[12px]">
+            <Badge className="bg-[#167a66] hover:bg-[#2EC5A7] rounded-full text-[10px] sm:text-[12px]">
               خصم 100 ريال
             </Badge>
           </motion.div>

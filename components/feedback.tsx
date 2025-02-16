@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Slider, { Settings } from 'react-slick';
 import Image from 'next/image';
 import 'slick-carousel/slick/slick.css';
@@ -35,6 +35,7 @@ const feedbacks: Testimonial[] = [
 
 export default function FeedbackSection() {
   const sliderRef = React.useRef<Slider>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const settings: Settings = {
     dots: true,
@@ -52,8 +53,36 @@ export default function FeedbackSection() {
           arrows: false,
         },
       },
+        {
+          breakpoint: 1024, // Tablets
+          settings: {
+            slidesToShow: 2,
+            arrows: true,
+          },
+        },
+        {
+          breakpoint: 768, // Mobile
+          settings: {
+            slidesToShow: 1,
+            arrows: false,
+          },
+        },
     ],
-    dotsClass: 'slick-dots custom-dots',
+    afterChange: (current: number) => setActiveIndex(current),
+    appendDots: (dots: string) => (
+      <div className="mt-8">
+        <ul className="flex justify-center gap-4 mt-10 p-2">{dots}</ul>
+      </div>
+    ),
+    customPaging: (i: number) => (
+      <div
+        className={`w-3 h-3 rounded-full cursor-pointer mt-4 transition-all ${
+          i === activeIndex
+            ? "bg-[#2EC5A7] border-2 border-[#2EC5A7]"
+            : "bg-gray-300 border border-transparent"
+        }`}
+      />
+    ),
   };
 
   return (
@@ -66,7 +95,7 @@ export default function FeedbackSection() {
           {feedbacks.map((item, index) => (
             <div key={index} className="px-4 focus:outline-none">
               <div
-                className="relative bg-white border-2 border-[#FEC89A] rounded-2xl shadow-lg 
+                className="relative bg-white border-2 border-[#2EC5A7] rounded-2xl shadow-lg 
                          px-6 pt-16 pb-10 flex flex-col items-center hover:shadow-xl transition-shadow"
                 style={{ minHeight: '30.25rem' }}
               >
@@ -80,13 +109,13 @@ export default function FeedbackSection() {
                       sizes="(max-width: 48rem) 100vw, 24rem"
                     />
                   </div>
-                  <img src="/yellowcircle.png" alt="circle" className=" absolute top-[-3.6625rem] right-[-6.25rem] " />
+                  <img src="/greencircle.png" alt="circle" className=" absolute top-[-3.6625rem] right-[-6.75rem] " />
                 </div>
                 <h3 className="mt-4 text-lg font-semibold mb-3 text-brown-900">{item.name}</h3>
                 <p className="text-center text-gray-700 mb-4 leading-relaxed">{item.feedback}</p>
-                <div className="flex flex-row justify-between items-center gap-20 mt-auto">
+                <div className="flex flex-row justify-between items-center gap-10 mt-auto">
                   <img src="/stars.png" alt="star" />
-                  <img src="/face.png" alt="face" />
+                  <img src="/greenface.png" alt="face" />
                 </div>
               </div>
             </div>

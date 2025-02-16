@@ -56,14 +56,14 @@ export const ServicesSection = () => {
         <motion.div variants={itemVariants} className="relative">
           <DropdownMenu onOpenChange={setOpen}>
             <div className="bg-[#FAF3EA] p-8 rounded-lg border border-primary">
-              <h3 className="text-xl sm:text-3xl font-bold text-center text-primary">
+              <h3 className="text-xl sm:text-3xl font-bold text-center text-[#2EC5A7]">
                 30 يوم ضمان
               </h3>
             </div>
             <DropdownMenuTrigger asChild>
               <Button
                 variant="outline"
-                className="absolute left-1/2 transform -translate-x-1/2 -bottom-4 shadow-lg text-center bg-primary hover:bg-primary/90"
+                className="absolute left-1/2 transform -translate-x-1/2 -bottom-4 shadow-lg text-center bg-[#2EC5A7] hover:bg-primary/90"
               >
                 <ChevronDown
                   className={`transition-transform duration-300 text-white ${
@@ -99,7 +99,7 @@ export const ServicesSection = () => {
         {/* Card 2 */}
         <motion.div variants={itemVariants} className="relative">
           <DropdownMenu onOpenChange={setOpen2}>
-            <div className="bg-primary p-8 rounded-lg border border-[#FAF3EA]">
+            <div className="bg-[#2EC5A7] p-8 rounded-lg border border-[#FAF3EA]">
               <h3 className="text-xl sm:text-3xl font-bold text-center text-[#FAF3EA]">
                 سياسة الاسترجاع
               </h3>
@@ -143,14 +143,14 @@ export const ServicesSection = () => {
         <motion.div variants={itemVariants} className="relative">
           <DropdownMenu onOpenChange={setOpen3}>
             <div className="bg-[#FAF3EA] p-8 rounded-lg border border-primary">
-              <h3 className="text-xl sm:text-3xl font-bold text-center text-primary">
+              <h3 className="text-xl sm:text-3xl font-bold text-center text-[#2EC5A7]">
                 التوصيل
               </h3>
             </div>
             <DropdownMenuTrigger asChild>
               <Button
                 variant="outline"
-                className="absolute left-1/2 transform -translate-x-1/2 -bottom-4 shadow-lg text-center bg-primary hover:bg-primary/90"
+                className="absolute left-1/2 transform -translate-x-1/2 -bottom-4 shadow-lg text-center bg-[#2EC5A7] hover:bg-[#2EC5A7]"
               >
                 <ChevronDown
                   className={`transition-transform duration-300 text-white ${

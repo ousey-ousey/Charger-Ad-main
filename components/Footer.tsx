@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className=" bg-[#3E2723] text-white py-10 px-6">
+    <footer className=" bg-[#156A59] text-white py-10 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl font-bold mb-6 text-center">تواصل معنا</h2>
         <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-8 mb-8">

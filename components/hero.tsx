@@ -62,7 +62,7 @@ export const Hero = () => {
       <div className="absolute bg-white md:w-[35%] md:h-[15%] w-11/12 h-auto top-0 right-0 flex justify-center items-center rounded-bl-[2rem] z-40 p-2">
         <p 
           style={{ lineHeight: "2rem" }}
-          className="text-center text-xl sm:text-2xl md:text-[2.3rem] font-semibold text-[#FFA726]"
+          className="text-center text-xl sm:text-2xl md:text-[2.3rem] font-semibold text-[#2EC5A7]"
         >
           حامل شحن لاسلكي دوار 3 في 1
         </p>

@@ -55,7 +55,7 @@ export const ProductSection = () => {
       <div
         className={`w-3 h-3 rounded-full cursor-pointer mt-4 transition-all ${
           i === activeIndex
-            ? "bg-red-600 border-2 border-black"
+            ? "bg-[#2EC5A7] border-2 border-[#2EC5A7]"
             : "bg-gray-300 border border-transparent"
         }`}
       />
@@ -120,7 +120,7 @@ export const ProductSection = () => {
                 <div className="flex flex-col sm:flex-row items-center gap-5">
                   <DialogTrigger asChild>
                     <motion.button
-                      className="mt-8 px-6 py-3 bg-primary text-lg sm:text-xl text-white font-medium rounded-lg shadow-md hover:bg-primary/90 transition-all"
+                      className="mt-8 px-6 py-3 bg-[#2EC5A7] text-lg sm:text-xl text-white font-medium rounded-lg shadow-md hover:bg-primary/90 transition-all"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
