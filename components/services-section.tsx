@@ -66,7 +66,7 @@ export const ServicesSection = () => {
                 className="absolute left-1/2 transform -translate-x-1/2 -bottom-4 shadow-lg text-center bg-[#2EC5A7] hover:bg-primary/90"
               >
                 <ChevronDown
-                  className={`transition-transform duration-300 text-[#2EC5A7] ${
+                  className={`transition-transform duration-300 text-primary ${
                     open ? "rotate-180" : "rotate-0"
                   }`}
                 />
@@ -99,7 +99,7 @@ export const ServicesSection = () => {
         {/* Card 2 */}
         <motion.div variants={itemVariants} className="relative">
           <DropdownMenu onOpenChange={setOpen2}>
-            <div className="bg-[#2EC5A7] p-8 rounded-lg border border-[#FAF3EA]">
+            <div className="bg-[#2EC5A7] p-8 rounded-lg border border-[#2EC5A7]">
               <h3 className="text-xl sm:text-3xl font-bold text-center text-[#FAF3EA]">
                 سياسة الاسترجاع
               </h3>
@@ -110,7 +110,7 @@ export const ServicesSection = () => {
                 className="absolute left-1/2 transform -translate-x-1/2 -bottom-4 border-none shadow-lg text-center bg-[#FAF3EA] hover:bg-[#FAF3EA]/90"
               >
                 <ChevronDown
-                  className={`transition-transform duration-300 text-primary ${
+                  className={`transition-transform duration-300 text-[#2EC5A7] ${
                     open2 ? "rotate-180" : "rotate-0"
                   }`}
                 />
@@ -127,7 +127,7 @@ export const ServicesSection = () => {
                     dir="rtl"
                     className="w-60 p-5 bg-primary border border-[#FAF3EA]"
                   >
-                    <p className="text-[#FAF3EA] text-justify">
+                    <p className="text-[#2EC5A7] text-justify">
                       عند استلام المنتج ، يمكنك إعادته خلال 30 يوم إذا كانت لديك
                       أي أسئلة بعد استلام المنتج ، فيرجى الاتصال بالدردشة
                       المباشرة أو البريد الإلكترونى support@yourstore.com
