@@ -8,6 +8,7 @@ import { RadioGroups } from "@/components/radio-groups";
 import { ProductSection } from "@/components/product-section";
 import { DetailsSection } from "@/components/details-section";
 import { ServicesSection } from "@/components/services-section";
+import  FeedbackSection  from "@/components/feedback";
 
 export default function LandingPage() {
   return (
@@ -30,6 +31,8 @@ export default function LandingPage() {
       <ServicesSection />
       {/* About Section */}
       <About />
+      {/* Feedback section */}
+      <FeedbackSection />
       {/*Footer section*/ }
       <Footer />
     </>
