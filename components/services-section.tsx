@@ -63,10 +63,10 @@ export const ServicesSection = () => {
             <DropdownMenuTrigger asChild>
               <Button
                 variant="outline"
-                className="absolute left-1/2 transform -translate-x-1/2 -bottom-4 shadow-lg text-center bg-[#2EC5A7] hover:bg-primary/90"
+                className="absolute left-1/2 transform -translate-x-1/2 -bottom-4 shadow-lg text-center bg-[#2EC5A7] hover:bg-[#2EC5A7]"
               >
                 <ChevronDown
-                  className={`transition-transform duration-300 text-primary ${
+                  className={`transition-transform duration-300 text-white ${
                     open ? "rotate-180" : "rotate-0"
                   }`}
                 />
@@ -74,14 +74,14 @@ export const ServicesSection = () => {
             </DropdownMenuTrigger>
             <AnimatePresence>
               {open && (
-                <DropdownMenuContent asChild>
+                <DropdownMenuContent  asChild>
                   <motion.div
                     variants={dropdownVariants}
                     initial="hidden"
                     animate="visible"
                     exit="exit"
                     dir="rtl"
-                    className="w-60 p-5 bg-[#2EC5A7] border border-primary"
+                    className="w-60 p-5  text-[#fff] border border-[#2EC5A7]"
                   >
                     <p className="text-muted-foreground text-justify">
                       ضمان إرجاع أو استرداد لمدة 30 يومًا. يؤهلك هذا للمطالبة
@@ -118,16 +118,16 @@ export const ServicesSection = () => {
             </DropdownMenuTrigger>
             <AnimatePresence>
               {open2 && (
-                <DropdownMenuContent asChild>
+                <DropdownMenuContent className="bg-[#2EC5A7]" asChild>
                   <motion.div
                     variants={dropdownVariants}
                     initial="hidden"
                     animate="visible"
                     exit="exit"
                     dir="rtl"
-                    className="w-60 p-5 bg-primary border border-[#FAF3EA]"
+                    className="w-60 p-5 bg-[#2EC5A7] border border-[#FAF3EA]"
                   >
-                    <p className="text-[#2EC5A7] text-justify">
+                    <p className="text-[#fff] text-justify">
                       عند استلام المنتج ، يمكنك إعادته خلال 30 يوم إذا كانت لديك
                       أي أسئلة بعد استلام المنتج ، فيرجى الاتصال بالدردشة
                       المباشرة أو البريد الإلكترونى support@yourstore.com
