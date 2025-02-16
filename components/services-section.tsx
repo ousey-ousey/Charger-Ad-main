@@ -66,7 +66,7 @@ export const ServicesSection = () => {
                 className="absolute left-1/2 transform -translate-x-1/2 -bottom-4 shadow-lg text-center bg-[#2EC5A7] hover:bg-primary/90"
               >
                 <ChevronDown
-                  className={`transition-transform duration-300 text-white ${
+                  className={`transition-transform duration-300 text-[#2EC5A7] ${
                     open ? "rotate-180" : "rotate-0"
                   }`}
                 />
@@ -81,7 +81,7 @@ export const ServicesSection = () => {
                     animate="visible"
                     exit="exit"
                     dir="rtl"
-                    className="w-60 p-5 bg-[#FAF3EA] border border-primary"
+                    className="w-60 p-5 bg-[#2EC5A7] border border-primary"
                   >
                     <p className="text-muted-foreground text-justify">
                       ضمان إرجاع أو استرداد لمدة 30 يومًا. يؤهلك هذا للمطالبة
