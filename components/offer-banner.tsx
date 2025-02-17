@@ -70,7 +70,7 @@ export const OfferBanner = () => {
       <motion.span
         variants={itemVariants}
         whileHover={{ scale: 1.05, rotate: 5 }}
-        className="flex items-center gap-2 sm:gap-3 text-base sm:text-lg md:text-xl font-semibold text-[#FEE3BB] mb-4 md:mb-0"
+        className="flex items-center gap-2 sm:gap-3 text-base sm:text-lg md:text-xl font-semibold text-[#fff] mb-4 md:mb-0"
       >
         <PercentCircle className="w-5 h-5 sm:w-6 sm:h-6" />
         هذه العروض ستنتهي بعد:

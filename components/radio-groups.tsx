@@ -170,7 +170,7 @@ export function RadioGroups() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="absolute -top-3 sm:-top-4"
           >
-            <Badge className="bg-[#167a66] hover:bg-[#2EC5A7]">
+            <Badge className="bg-[#2EC5A7] hover:bg-[#2EC5A7]">
               +بطارية 500 أمبير
             </Badge>
           </motion.div>
@@ -180,7 +180,7 @@ export function RadioGroups() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="absolute top-2.5 -left-4 sm:-left-6"
           >
-            <Badge className="bg-[#167a66] hover:bg-[#2EC5A7] rounded-full text-[10px] sm:text-[12px]">
+            <Badge className="bg-[#2EC5A7] hover:bg-[#2EC5A7] rounded-full text-[10px] sm:text-[12px]">
               خصم 100 ريال
             </Badge>
           </motion.div>
@@ -234,7 +234,7 @@ export function RadioGroups() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="absolute -top-3 sm:-top-4"
           >
-            <Badge className="bg-[#167a66] hover:bg-[#2EC5A7]">
+            <Badge className="bg-[#2EC5A7] hover:bg-[#2EC5A7]">
               +بطارية 500 أمبير
             </Badge>
           </motion.div>
@@ -244,7 +244,7 @@ export function RadioGroups() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="absolute top-2.5 -left-4 sm:-left-6"
           >
-            <Badge className="bg-[#167a66] hover:bg-[#2EC5A7] rounded-full text-[10px] sm:text-[12px]">
+            <Badge className="bg-[#2EC5A7] hover:bg-[#2EC5A7] rounded-full text-[10px] sm:text-[12px]">
               خصم 100 ريال
             </Badge>
           </motion.div>
@@ -299,7 +299,7 @@ export function RadioGroups() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="absolute top-2.5 -left-4 sm:-left-6"
           >
-            <Badge className="bg-[#167a66] hover:bg-[#2EC5A7] rounded-full text-[10px] sm:text-[12px]">
+            <Badge className="bg-[#2EC5A7] hover:bg-[#2EC5A7] rounded-full text-[10px] sm:text-[12px]">
               خصم 100 ريال
             </Badge>
           </motion.div>
