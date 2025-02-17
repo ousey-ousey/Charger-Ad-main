@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Almarai } from "next/font/google";
-
+import { Analytics } from "@vercel/analytics/react"
 const almarai = Almarai({
   subsets: ["arabic"],
   weight: ["300", "400", "700", "800"],
@@ -23,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body className={`${almarai.variable} font-almarai antialiased`}>
+      <Analytics/>
         {children}
       </body>
     </html>
