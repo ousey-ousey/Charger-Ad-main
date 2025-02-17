@@ -53,7 +53,7 @@ export const Banner = () => {
       </motion.p>
     </motion.section>
       <img src="greenline.png" alt="greeny" 
-        className="w-full h-auto object-cover mb-8"
+        className="w-full h-auto object-cover"
       />
     </div>
     );

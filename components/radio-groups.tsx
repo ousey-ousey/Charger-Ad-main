@@ -204,13 +204,13 @@ export function RadioGroups() {
             <h2 className="text-base sm:text-lg font-bold text-primary">
               كفر مضاد للمياه
                + 
-               <p className="text-[#FFA726] inline-block">
+               <p className="text-[#2EC5A7] inline-block">
                خصم
             40
             %
             </p>
             </h2>
-            <div className="px-3 py-2 sm:px-5 sm:py-3 text-center bg-[#E7E7E7] text-[#FFA726] font-bold text-xs sm:text-sm">
+            <div className="px-3 py-2 sm:px-5 sm:py-3 text-center bg-[#E7E7E7] text-[#2EC5A7] font-bold text-xs sm:text-sm">
               الأكثر مبيعا
             </div>
           </div>
@@ -268,14 +268,14 @@ export function RadioGroups() {
             <h2 className="text-base sm:text-lg font-bold text-primary">
               
             كفر مضاد للمياه + 
-            <p className="text-[#FFA726] inline-block">
+            <p className="text-[#2EC5A7] inline-block">
                خصم
             40
             %
             </p>
            
             </h2>
-            <div className="px-3 py-2 sm:px-5 sm:py-3 text-center bg-[#E7E7E7] text-[#FFA726] font-bold text-xs sm:text-sm">
+            <div className="px-3 py-2 sm:px-5 sm:py-3 text-center bg-[#E7E7E7] text-[#2EC5A7] font-bold text-xs sm:text-sm">
               الأكثر مبيعا
             </div>
           </div>

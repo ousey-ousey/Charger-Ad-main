@@ -55,7 +55,7 @@ export const ServicesSection = () => {
         {/* Card 1 */}
         <motion.div variants={itemVariants} className="relative">
           <DropdownMenu onOpenChange={setOpen}>
-            <div className="bg-[#FAF3EA] p-8 rounded-lg border border-primary">
+            <div className="bg-[#2EC5A7] bg-opacity-20  p-8 rounded-lg border border-[#2EC5A7]">
               <h3 className="text-xl sm:text-3xl font-bold text-center text-[#2EC5A7]">
                 30 يوم ضمان
               </h3>
@@ -142,7 +142,7 @@ export const ServicesSection = () => {
         {/* Card 3 */}
         <motion.div variants={itemVariants} className="relative">
           <DropdownMenu onOpenChange={setOpen3}>
-            <div className="bg-[#FAF3EA] p-8 rounded-lg border border-primary">
+            <div className="bg-[#2EC5A7] bg-opacity-20 p-8 rounded-lg border border-[#2EC5A7]">
               <h3 className="text-xl sm:text-3xl font-bold text-center text-[#2EC5A7]">
                 التوصيل
               </h3>
