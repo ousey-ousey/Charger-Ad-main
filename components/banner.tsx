@@ -12,7 +12,7 @@ const cairo = Cairo({
 export const Banner = () => {
   return (
     <div>
-        <motion.section
+{/*         <motion.section
       className={`relative flex justify-center items-center text-center h-16 sm:h-20 p-4 md:p-8 lg:p-12 ${cairo.className}`}
       style={{
         backgroundImage:
@@ -25,21 +25,18 @@ export const Banner = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
-      {/* Background Vector Graphic */}
       <img
         src="/Vector-banner.png"
         alt="draw"
         className="absolute bottom-4 left-[48%] transform -translate-x-1/2 w-3/4 h-10 z-0 opacity-60 m:opacity-80"
       />
 
-      {/* Delivery Icon positioned at the end of the vector */}
       <img
         src="/mdi_delivery-dining-electric.png"
         alt="delivery"
         className="absolute bottom-4 right-[13%] opacity-60 m:opacity-80 z-0 w-12 h-12"
       />
 
-      {/* Text Content */}
       <motion.p
         className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold px-4 py-3 rounded-lg text-[#2EC5A7] relative z-10"
         style={{ lineHeight: 1.75 }}
@@ -51,7 +48,7 @@ export const Banner = () => {
         توصيل سريع خلال ٤٨ ساعة + تخفيض
         <span className="text-[#FEE3BB]"> %50 </span>+ هدية بعد الطلب
       </motion.p>
-    </motion.section>
+    </motion.section> */}
       <img src="greenline.png" alt="greeny" 
         className="w-full h-auto object-cover"
       />
