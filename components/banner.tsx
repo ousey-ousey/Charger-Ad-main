@@ -1,13 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Cairo } from "next/font/google";
+// import { motion } from "framer-motion";
+// import { Cairo } from "next/font/google";
 
-const cairo = Cairo({
-  weight: ["400", "700"],
-  subsets: ["arabic"],
-  display: "swap",
-});
+// const cairo = Cairo({
+//   weight: ["400", "700"],
+//   subsets: ["arabic"],
+//   display: "swap",
+// });
 
 export const Banner = () => {
   return (
