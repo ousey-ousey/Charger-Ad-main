@@ -86,7 +86,7 @@ export default function FeedbackSection() {
   };
 
   return (
-    <section className="w-full py-24 bg-[#FFF7ED] mb-20 md:mb-32 relative">
+    <section className="w-full py-24 bg-[#FFF7ED] mb-20 md:mb-20 relative">
       <h2 className="text-center text-4xl text-[#3E2723] font-bold text-brown-800 mb-10">
         آراء عملائنا
       </h2>
