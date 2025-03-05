@@ -1,7 +1,6 @@
 import Footer from "@/components/Footer";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
-import { Banner } from "@/components/banner";
 import { Features } from "@/components/features";
 import { OfferBanner } from "@/components/offer-banner";
 import { RadioGroups } from "@/components/radio-groups";
@@ -13,16 +12,15 @@ import  FeedbackSection  from "@/components/feedback";
 export default function LandingPage() {
   return (
     <>
-      {/* Banner */}
-      <Banner />
-      {/* Hero */}
+ {/* Offer Banner */}
+ <OfferBanner />    
+   {/* Hero */}
       <Hero />
       {/* Product Section */}
       <ProductSection />
       {/* Radio Groups Section */}
       <RadioGroups />
-      {/* Offer Banner */}
-      <OfferBanner />
+     
       {/* Features Section */}
       <Features />
       {/* Details Section */}
